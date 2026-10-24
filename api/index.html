@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Haven | Luxury Resort &amp; Spa</title>
+  <meta name="description" content="Discover elegant villas, signature dining, peaceful experiences and luxury stays at Aura Haven Luxury Resort & Spa.">
+  <meta name="theme-color" content="#0d1114">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind = {
+      config: {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['Cormorant Garamond', 'serif'],
+              sans: ['Plus Jakarta Sans', 'sans-serif']
+            },
+            colors: {
+              gold: { 400: '#E5C07B', 500: '#D4AF70', 600: '#AA820A' },
+              dark: { 900: '#0D1114', 800: '#151B20', 700: '#21262D' }
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark-900 text-stone-200 font-sans antialiased">
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#home" class="brand flex items-center gap-3" aria-label="Aura Haven home">
+        <span class="brand-mark">A</span>
+        <span class="brand-name font-serif text-xl md:text-2xl tracking-widest uppercase text-white font-semibold">Aura Haven</span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm text-stone-300 desktop-nav">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#suites">Villas &amp; Suites</a>
+        <a href="#amenities">Experiences</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+      </div>
+      <a href="#bookingPopup" class="nav-book hidden sm:inline-flex items-center justify-center px-5 py-3 bg-gold-500 text-black rounded-full text-xs font-semibold uppercase tracking-wider">Reserve Your Stay</a>
+      <button id="menuToggle" type="button" class="md:hidden text-white border border-stone-700 rounded-lg px-3 py-2" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNavigation"><span id="menuIcon">☰</span></button>
+    </div>
+    <div id="mobileNavigation" class="hidden md:hidden px-6 pb-6 pt-2 bg-dark-900/95 border-t border-stone-800">
+      <div class="flex flex-col gap-5 text-sm text-stone-300">
+        <a class="mobile-link" href="#home">Home</a><a class="mobile-link" href="#about">About</a>
+        <a class="mobile-link" href="#suites">Villas &amp; Suites</a><a class="mobile-link" href="#amenities">Experiences</a>
+        <a class="mobile-link" href="#gallery">Gallery</a><a class="mobile-link" href="#contact">Contact</a>
+        <a class="mobile-link text-gold-400 font-semibold" href="#bookingPopup">Reserve Your Stay</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden">
+    <div class="hero-background" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="relative z-20 max-w-5xl mx-auto text-center px-6">
+      <div data-aos="fade-down"><span class="eyebrow">A World Beyond Ordinary</span></div>
+      <h1 data-aos="fade-up" data-aos-delay="150" class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-normal leading-tight mt-8 mb-6">
+        Discover the Art of<br><span class="italic text-gold-400">Luxury Living</span>
+      </h1>
+      
+      <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+        <a href="#bookingPopup" class="button button-gold">Book Your Escape</a>
+        <a href="#suites" class="button button-outline">Explore Our Villas</a>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="500" class="hero-note">
+        <span>✦ Thoughtful luxury</span><span>✦ Restful surroundings</span><span>✦ Memorable moments</span>
+      </div>
+      <a href="#about" class="scroll-cue"><span>Discover More</span><span class="scroll-arrow">↓</span></a>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section-wrap">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+      <div class="about-image-wrap" data-aos="fade-right">
+        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=85" alt="Peaceful resort pool surrounded by tropical greenery" loading="lazy">
+        <div class="image-caption"><span>YOUR PRIVATE ESCAPE</span><strong>Find your own kind of peace.</strong></div>
+      </div>
+      <div data-aos="fade-left">
+        <p class="section-kicker">WELCOME TO AURA HAVEN</p>
+        <h2 class="section-title font-serif">A place to slow down<br><em>and feel renewed.</em></h2>
+        <p class="body-copy">Discover a considered blend of contemporary comfort, warm hospitality and nature-inspired calm. From quiet mornings to golden-hour views, every detail is designed to make your stay feel special.</p>
+        <p class="body-copy">Whether you are planning a romantic escape, a family holiday or a peaceful break, Aura Haven offers space to reconnect and create lasting memories.</p>
+        <div class="stats-grid">
+          <div><strong class="counter">24/7</strong><span>Guest assistance</span></div>
+          <div><strong class="counter">3</strong><span>Signature stays</span></div>
+          <div><strong class="counter">1</strong><span>Unforgettable escape</span></div>
+        </div>
+        <a class="text-link" href="#suites">Discover our stays <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Suites -->
+  <section id="suites" class="section-wrap suites-section">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="section-heading text-center" data-aos="fade-up">
+        <p class="section-kicker">STAY A LITTLE LONGER</p>
+        <h2 class="section-title font-serif">Villas &amp; <em>Suites</em></h2>
+        <p class="body-copy max-w-2xl mx-auto">Find a stay that matches your mood, with inviting spaces, considered details and room to unwind.</p>
+      </div>
+      
+
+<section class="experience section" id="services">
+  <div class="experience-image"></div>
+  <div class="experience-content">
+    
+  <span class="dream-badge">THE DREAM ESCAPE EXPERIENCE</span>
+  <h2 class="dream-title font-serif">Every detail,<br><em>thoughtfully considered.</em></h2>
+  <p class="dream-desc"><h3>Make time for the things that matter. Enjoy restful spaces, refreshing experiences, and warm hospitality throughout your stay.</h3></p>
+</div>
+    <div class="service-list">
+       <div class="room-grid">
+    <article class="room-card">
+      <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=85" alt="Elegant luxury hotel bedroom">
+      <div class="room-info">
+        <span class="room-tag">COMFORT & STYLE</span>
+        <h3>Deluxe Room</h3>
+        <p>A welcoming space for a relaxing getaway.</p>
+        <a href="#bookingpopup" class="text-link open-booking">Reserve this room ↗</a>
+      </div>
+    </article>
+    <article class="room-card">
+      <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=900&q=85" alt="Luxury villa with swimming pool">
+      <div class="room-info">
+        <span class="room-tag">PRIVATE LUXURY</span>
+        <h3>Private Villa</h3>
+        <p>Enjoy extra space and a peaceful atmosphere.</p>
+        <a href="#bookingpopup" class="text-link open-booking">Reserve this villa ↗</a>
+      </div>
+    </article>
+    <article class="room-card">
+      <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=85" alt="Resort swimming pool surrounded by greenery">
+      <div class="room-info">
+        <span class="room-tag">A SPECIAL ESCAPE</span>
+        <h3>Poolside Suite</h3>
+        <p>Unwind beside the water in an elegant setting.</p>
+        <a href="#bookingpopup" class="text-link open-booking">Reserve this suite ↗</a>
+      </div>
+    </article>
+    </div>
+  </section>
+
+  <!-- Experiences -->
+  <section id="amenities" class="section-wrap">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="section-heading text-center" data-aos="fade-up">
+        <p class="section-kicker">THE AURA EXPERIENCE</p>
+        <h2 class="section-title font-serif">Little moments, <em>beautifully made.</em></h2>
+        <p class="body-copy max-w-2xl mx-auto">Make time for the things that help you feel your best.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+        <article class="experience-card" data-aos="fade-up"><span class="experience-icon">♨</span><h3 class="font-serif">Spa &amp; Wellness</h3><p>Slow down with soothing rituals and moments of stillness.</p></article>
+        <article class="experience-card" data-aos="fade-up" data-aos-delay="80"><span class="experience-icon">⌁</span><h3 class="font-serif">Infinity Pool</h3><p>Take a refreshing dip and enjoy a peaceful poolside pause.</p></article>
+        <article class="experience-card" data-aos="fade-up" data-aos-delay="160"><span class="experience-icon">✧</span><h3 class="font-serif">Signature Dining</h3><p>Savour thoughtful flavours and relaxed dining experiences.</p></article>
+        <article class="experience-card" data-aos="fade-up" data-aos-delay="240"><span class="experience-icon">☼</span><h3 class="font-serif">Nature Walks</h3><p>Reconnect with the outdoors at an unhurried pace.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section-wrap gallery-section">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="section-heading text-center" data-aos="fade-up">
+        <p class="section-kicker">A GLIMPSE OF AURA</p>
+        <h2 class="section-title font-serif">Moments worth <em>remembering.</em></h2>
+      </div>
+      <div class="gallery-grid mt-12">
+        
+        <img data-aos="zoom-in" data-aos-delay="80" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=900&q=85" alt="Resort swimming pool" loading="lazy">
+        <img data-aos="zoom-in" data-aos-delay="120" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=85" alt="Elegant interior" loading="lazy">
+        <img data-aos="zoom-in" data-aos-delay="160" src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?auto=format&fit=crop&w=900&q=85" alt="Tropical resort garden" loading="lazy">
+        <img data-aos="zoom-in" data-aos-delay="200" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=85" alt="Comfortable guest bedroom" loading="lazy">
+        <img data-aos="zoom-in" data-aos-delay="120" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=85" alt="Luxury resort exterior">
+    <img data-aos="zoom-in" data-aos-delay="160" src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=900&q=85" alt="Resort pool">
+    <img data-aos="zoom-in" data-aos-delay="200" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=85" alt="Hotel entrance">
+    <img data-aos="zoom-in" data-aos-delay="200" src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=85" alt="Comfortable resort bedroom">
+  </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action -->
+  <section class="cta-section">
+    <div class="cta-inner" data-aos="fade-up">
+      <p class="section-kicker">YOUR NEXT CHAPTER OF REST</p>
+      <h2 class="font-serif">Your escape is <em>closer than you think.</em></h2>
+      <p>Choose your dates and let your Aura Haven experience begin.</p>
+      <button type="button" class="button button-gold" onclick="openBookingPopup()">Reserve Your Stay</button>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <footer id="contact" class="footer-section">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 footer-grid">
+        <div><a href="#home" class="brand flex items-center gap-3"><span class="brand-mark">A</span><span class="brand-name font-serif text-xl tracking-widest uppercase text-white">Aura Haven</span></a><p class="footer-copy mt-5">A considered escape for slower days, thoughtful comforts and lasting memories.</p></div>
+        <div><h3 class="footer-title">Explore</h3><a href="#about">Our story</a><a href="#suites">Villas &amp; suites</a><a href="#amenities">Experiences</a><a href="#gallery">Gallery</a></div>
+        <div><h3 class="footer-title">Contact</h3><p>Bayanapalli, Krishnagiri,<br>Tamil Nadu 635006, India</p><a href="tel:+911234567890">+91 12345 67890</a><a href="mailto:dream_escape@gmail.com">dream_escape@gmail.com</a><p>Guest assistance: 24 hours</p></div>
+        <div><h3 class="footer-title">Plan your stay</h3><p>Have a question about your visit? Get in touch with our team.</p><button type="button" class="button button-outline footer-button" onclick="openBookingPopup()">Book a stay</button></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="currentYear"></span> Aura Haven Luxury Resort &amp; Spa.</span><a href="#home">Back to top ↑</a></div>
+    </div>
+  </footer>
+
+  <!-- Booking popup -->
+  <div id="bookingPopup" class="booking-overlay" aria-hidden="true">
+    <div class="booking-box" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+      <button type="button" class="close-popup" onclick="closeBookingPopup()" aria-label="Close booking form">&times;</button>
+      <p class="booking-brand">AURA HAVEN</p>
+      <h2 id="bookingTitle" class="font-serif">Reserve Your Stay</h2>
+      <p class="booking-subtitle">Your extraordinary escape begins here.</p>
+      <form id="popupBookingForm" action="book.php" method="POST">
+        <label for="guest_name">Guest Name</label>
+        <input type="text" id="guest_name" name="guest_name" placeholder="Enter your full name" autocomplete="name" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="10-digit phone number" inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10" autocomplete="tel" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="email" required>
+
+        <div class="booking-row">
+          <div><label for="check_in">Check-in</label><input type="date" id="check_in" name="check_in" required></div>
+          <div><label for="check_out">Check-out</label><input type="date" id="check_out" name="check_out" required></div>
+        </div>
+
+        <label for="popup_guests">Number of Guests</label>
+        <select id="popup_guests" name="guests" required>
+          <option value="2">2 Guests</option>
+          <option value="1">1 Guest</option>
+          <option value="3">3 Guests</option><option value="4">4 Guests</option>
+          <option value="5">5 Guests</option><option value="6">6 Guests</option>
+          <option value="7">7 Guests</option><option value="8">8 Guests</option>
+          <option value="9">9 Guests</option><option value="10">10 Guests</option>
+        </select>
+
+        <label for="popup_room_type">Room Type</label>
+        <select id="popup_room_type" name="room_type" required>
+          <option value="Deluxe Room">Deluxe Room</option>
+          <option value="Poolside Suite">Poolside Suite</option>
+          <option value="Private Villa">Private Villa</option>
+        </select>
+        <label for="number_of_rooms">Number of Rooms</label>
+<select id="number_of_rooms" name="number_of_rooms" required>
+    <option value="1">1 Room</option>
+    <option value="2">2 Rooms</option>
+    <option value="3">3 Rooms</option>
+</select>
+
+        <button type="button" id="popupAvailabilityButton" class="booking-button" onclick="checkPopupAvailability()">Check Availability</button>
+        <p id="availabilityMessage" class="availability-message" role="status" aria-live="polite"></p>
+        <button type="submit" class="booking-button submit-booking">Submit Booking</button>
+        <p class="form-note">Your reservation is confirmed only after the server successfully processes your booking.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp: replace this demo number with your real WhatsApp number -->
+  <a href="https://wa.me/911234567890" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact Aura Haven on WhatsApp">
+    <svg viewBox="0 0 32 32" role="img" aria-hidden="true"><path fill="currentColor" d="M16 .8A15.1 15.1 0 0 0 3.1 23.7L1 31l7.5-2A15.1 15.1 0 1 0 16 .8Zm0 27.5a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.4 1.2L6 23.2l-.3-.5A12.4 12.4 0 1 1 16 28.3Zm6.8-9.3c-.4-.2-2.2-1.1-2.6-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.2 0-.5 0-.7l-1.2-2.8c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.3 2.6 4 6.3 5.6.9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5Z"/></svg>
+  </a>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
