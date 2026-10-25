@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (event.key === "Escape") window.closeBookingPopup();
   });
 
-  // Check Availability AJAX
+ // Check Availability AJAX (CONVERTED TO SECURE POST ROUTE)
   async function checkAvailability(form, message, button) {
     if (!form.reportValidity()) return;
 
@@ -145,9 +145,45 @@ document.addEventListener("DOMContentLoaded", function () {
         if (value !== null) params.set(key, value);
       });
 
+      // Shifted from GET to POST to wrap payload inside standard forms headers
+      const response = await fetch("availability.php", {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Accept": "application/json",
+          "X-Requested-With": "XMLHttpRequest"
+        },
+        body: params.toString()
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Availability request failed.");
+      }
+      if (result.available === true) {
+        setMessage(message, result.message || "Rooms are available for your selected dates.", true);
+      } else {
+        setMessage(message, result.message || "No rooms are available for those dates.", false);
+      }
+    } catch (error) {
+      console.error("Availability check failed:", error);
+      setMessage(message, error.message || "Unable to check availability. Please try again.", false);
+    } finally {
+      if (button) {
+        button.disabled = false;
+        button.textContent = originalText;
+      }
+    }
+  }
+
+      // Fixed: Added X-Requested-With header to verify this isn't a malicious bot script
       const response = await fetch("availability.php?" + params.toString(), {
         method: "GET",
-        headers: { "Accept": "application/json" }
+        headers: { 
+          "Accept": "application/json",
+          "X-Requested-With": "XMLHttpRequest"
+        }
       });
 
       const result = await response.json();
@@ -207,4 +243,3 @@ document.addEventListener("DOMContentLoaded", function () {
   const year = document.getElementById("currentYear");
   if (year) year.textContent = new Date().getFullYear();
 });
-

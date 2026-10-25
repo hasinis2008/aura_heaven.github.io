@@ -20,16 +20,15 @@ if ($conn->connect_error) {
 
 $conn->set_charset("utf8mb4");
 
-$check_in = trim($_GET['check_in'] ?? '');
-$check_out = trim($_GET['check_out'] ?? '');
+$check_in = trim($_POST['check_in'] ?? '');
+$check_out = trim($_POST['check_out'] ?? '');
 
 $guests = filter_var(
-    $_GET['guests'] ?? '',
+    $_POST['guests'] ?? 1,
     FILTER_VALIDATE_INT
 );
 
-$room_type = trim($_GET['room_type'] ?? '');
-
+$room_type = trim($_POST['room_type'] ?? '');
 $requested_rooms = filter_var(
     $_GET['number_of_rooms'] ?? '1',
     FILTER_VALIDATE_INT
