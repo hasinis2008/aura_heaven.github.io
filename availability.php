@@ -30,10 +30,9 @@ $guests = filter_var(
 
 $room_type = trim($_POST['room_type'] ?? '');
 $requested_rooms = filter_var(
-    $_GET['number_of_rooms'] ?? '1',
+    $_POST['number_of_rooms'] ?? '1',
     FILTER_VALIDATE_INT
 );
-
 $allowed_rooms = [
     'Deluxe Room',
     'Poolside Suite',

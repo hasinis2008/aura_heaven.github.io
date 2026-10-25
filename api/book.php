@@ -170,7 +170,7 @@ $conn->commit();
         <link rel='preconnect' href='https://fonts.googleapis.com'>
         <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
         <link href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap' rel='stylesheet'>
-        <link rel='stylesheet' href='style.css'>
+        <link rel='stylesheet' href='../style.css'>
     </head>
     <body class='confirmation-body'>
         <div class='confirmation-card'>
